@@ -55,10 +55,10 @@ ACCOMMODATION = {
         ("\U0001F333",        "Naturgrundstück"),
     ],
     "rooms": [
-        ("Schlafzimmer 1", "1 Doppelbett"),
-        ("Schlafzimmer 2", "2 Einzelbetten"),
-        ("Schlafzimmer 3", "1 Etagenbett"),
-        ("Badezimmer",     "1 Bad"),
+        ("Schlafzimmer 1", "1 Doppelbett",   "haus_fotos/foto_446653.jpg"),
+        ("Schlafzimmer 2", "2 Einzelbetten", "haus_fotos/foto_446657.jpg"),
+        ("Schlafzimmer 3", "1 Etagenbett",   "haus_fotos/foto_446658.jpg"),
+        ("Badezimmer",     "1 Bad",          None),
     ],
 }
 
@@ -80,6 +80,7 @@ REST_STOPS = [
         "desc":  "Brückenrasthöf – Restaurant spannt sich 103 m über die A1. Burger King, Nordsee, Shell, Spielplatz, Sanifair-WC.",
         "link":  "https://www.serways.de/standorte/dammer-berge-ost/",
         "maps":  f"https://www.google.com/maps/dir/{START_ADDR}/Serways+Rastst%C3%A4tte+Dammer+Berge+Ost,+49451+Holdorf",
+        "photo": "content_fotos/rs_dammer.jpg",
     },
     {
         "name":  "⛽ Grundbergsee Süd",
@@ -87,6 +88,7 @@ REST_STOPS = [
         "desc":  "Modern gebaute Rastanlage mit Burger King, Aral-Tanke und grossem Wickelbereich. Guter Tank-Stopp vor Hamburg.",
         "link":  "https://www.serways.de/standorte/grundbergsee-sued/",
         "maps":  f"https://www.google.com/maps/dir/{START_ADDR}/Serways+Grundbergsee+S%C3%BCd",
+        "photo": "content_fotos/rs_grundbergsee.jpg",
     },
     {
         "name":  "\U0001F37D️ Autohof Bockel",
@@ -94,6 +96,7 @@ REST_STOPS = [
         "desc":  "Großer Aral-Autohof mit günstigem Service-Restaurant (Schnitzel, Fisch, Pizza). Beliebte Alternative zu den Brücken-Raststaetten.",
         "link":  "https://autohof-bockel.de/",
         "maps":  f"https://www.google.com/maps/dir/{START_ADDR}/Aral+Autohof+Bockel,+27386+Bockel",
+        "photo": None,
     },
     {
         "name":  "\U0001F332 Hüttener Berge Ost",
@@ -101,6 +104,7 @@ REST_STOPS = [
         "desc":  "Landschaftlich sehr schön mitten im Naturpark Hüttener Berge. Letzter grösserer Stopp vor der dänischen Grenze – hier noch volltanken!",
         "link":  "https://www.raststaetten.de/standorte/huettener-berge-ost/",
         "maps":  f"https://www.google.com/maps/dir/{START_ADDR}/Serways+H%C3%BCttener+Berge+Ost",
+        "photo": "content_fotos/rs_huettener.jpg",
     },
     {
         "name":  "\U0001F1E9\U0001F1F0 Rasteplads Frøslev Øst",
@@ -108,6 +112,7 @@ REST_STOPS = [
         "desc":  "Erste dänische Rastanlage nach Padborg. Circle K mit Tankstelle, Imbiss, Spielplatz und seit 2024 Schnellladesaeulen. Hunde dürfen an der Leine auf die Grünflaeche.",
         "link":  "https://www.vejdirektoratet.dk/trafikant/rastepladser-din-pause-paa-turen",
         "maps":  f"https://www.google.com/maps/dir/{START_ADDR}/Rasteplads+Fr%C3%B8slev+%C3%98st",
+        "photo": None,
     },
     {
         "name":  "\U0001F6E3️ Rasteplads Skærup Vest",
@@ -115,6 +120,7 @@ REST_STOPS = [
         "desc":  "Letzter Stretch-Stopp vor Abzweig Richtung Varde/Henne. OK/Circle K, Imbiss, WC, Spielplatz, seit 2026 neuer Schnellladepark.",
         "link":  "https://www.vejdirektoratet.dk/trafikant/rastepladser-din-pause-paa-turen",
         "maps":  f"https://www.google.com/maps/dir/{START_ADDR}/Rasteplads+Sk%C3%A6rup+Vest",
+        "photo": "content_fotos/rs_skaerup.jpg",
     },
 ]
 
@@ -141,42 +147,49 @@ BEACHES = [
         "desc":  "Breiter, feiner Sandstrand direkt am Ort, ca. 400 m vom Haus. Autofrei, Lifeguard Ende Juni bis Ende August. Starke Strömung – auf Warnflaggen achten.",
         "maps":  f"https://www.google.com/maps/dir/{HOUSE_ADDR}/Henne+Strand+beach",
         "tag":   "Hauptstrand · 400 m",
+        "photo": "content_fotos/strand_henne.jpg",
     },
     {
         "name":  "Henne Mølle Å",
         "desc":  "Ruhiger Natur-Sandstrand nördlich vom Ort, wo die Henne Mølle Å in die Nordsee mündet. Weite Dünen, kaum Infrastruktur – perfekt für lange Spaziergänge.",
         "maps":  f"https://www.google.com/maps/dir/{HOUSE_ADDR}/Henne+M%C3%B8lle+%C3%85+Strand",
         "tag":   "Geheimtipp",
+        "photo": "content_fotos/strand_henne_m.jpg",
     },
     {
         "name":  "Houstrup Strand",
         "desc":  "Weitlaeufiger Sandstrand nord-westlich mit grosser Dünenlandschaft. Weniger touristisch als Blåvand, gute Brandungsbedingungen.",
         "maps":  f"https://www.google.com/maps/dir/{HOUSE_ADDR}/Houstrup+Strand",
         "tag":   "Ruhig · Dünen",
+        "photo": None,
     },
     {
         "name":  "Nymindegab Strand",
         "desc":  "Nördlich von Henne am Übergang zum Ringkøbing Fjord. Breiter Sandstrand mit Dünen; in der Nähe die Tipperne-Vogelschutzgebiete.",
         "maps":  f"https://www.google.com/maps/dir/{HOUSE_ADDR}/Nymindegab+Strand",
         "tag":   "Natur · Vögel",
+        "photo": "content_fotos/strand_nymindegab.jpg",
     },
     {
         "name":  "Vejers Strand",
         "desc":  "Klassischer befahrbarer Nordseestrand (man darf mit dem Auto auf den Sand!). Lifeguard im Sommer, Kiosk und Strand-Camping direkt nebenan – familienfreundlich.",
         "maps":  f"https://www.google.com/maps/dir/{HOUSE_ADDR}/Vejers+Strand",
         "tag":   "Auto auf Strand · Familie",
+        "photo": "content_fotos/strand_vejers.jpg",
     },
     {
         "name":  "Blåvand Strand",
         "desc":  "Einer der bekanntesten Strände Daenemarks, westlichster Punkt des Landes. Feiner weisser Sand, Bunker-Skulpturen (Tirpitz-Stellung). Häufig mit der Blauen Flagge ausgezeichnet.",
         "maps":  f"https://www.google.com/maps/dir/{HOUSE_ADDR}/Bl%C3%A5vand+Strand",
         "tag":   "Blaue Flagge · Highlight",
+        "photo": "content_fotos/strand_blaavand.jpg",
     },
     {
         "name":  "\U0001F436 Hundewald Øksby",
         "desc":  "Eingezäunter Hundewald nahe Blåvand – hier dürfen Hunde ganzjährig frei laufen. Praktisch an heissen Tagen als Schatten-Alternative zum Strand.",
         "maps":  f"https://www.google.com/maps/dir/{HOUSE_ADDR}/%C3%98ksby+Hundeskov",
         "tag":   "\U0001F436 Frei laufen ganzjährig",
+        "photo": None,
     },
 ]
 
@@ -192,6 +205,7 @@ ATTRACTIONS = [
         "link":     "https://tirpitz.dk/",
         "maps":     f"https://www.google.com/maps/dir/{HOUSE_ADDR}/Tirpitz,+Tirpitzvej+1,+6857+Bl%C3%A5vand",
         "distance": "~ 30 Min.",
+        "photo":    "content_fotos/tirpitz.jpg",
     },
     {
         "name":     "\U0001F3EF Blåvandshuk Fyr",
@@ -199,6 +213,7 @@ ATTRACTIONS = [
         "link":     "https://www.vardemuseerne.dk/museum/blaavandshuk-fyr/",
         "maps":     f"https://www.google.com/maps/dir/{HOUSE_ADDR}/Bl%C3%A5vandshuk+Fyr,+6857+Bl%C3%A5vand",
         "distance": "~ 32 Min.",
+        "photo":    None,
     },
     {
         "name":     "⛪ Ribe – älteste Stadt Skandinaviens",
@@ -206,6 +221,7 @@ ATTRACTIONS = [
         "link":     "https://www.visitribe.dk/",
         "maps":     f"https://www.google.com/maps/dir/{HOUSE_ADDR}/Ribe,+Denmark",
         "distance": "~ 55 Min.",
+        "photo":    "content_fotos/ribe.jpg",
     },
     {
         "name":     "\U0001F41F Fiskeri- og Søfartsmuseet (Esbjerg)",
@@ -213,6 +229,7 @@ ATTRACTIONS = [
         "link":     "https://www.fimus.dk/",
         "maps":     f"https://www.google.com/maps/dir/{HOUSE_ADDR}/Fiskeri-+og+S%C3%B8fartsmuseet,+Tarphagevej+2,+6710+Esbjerg",
         "distance": "~ 45 Min.",
+        "photo":    "content_fotos/fimus.jpg",
     },
     {
         "name":     "\U0001F5FF Mennesket ved Havet",
@@ -220,6 +237,7 @@ ATTRACTIONS = [
         "link":     "https://www.visitesbjerg.com/ln-int/esbjerg/man-meets-sea-gdk600115",
         "maps":     f"https://www.google.com/maps/dir/{HOUSE_ADDR}/Mennesket+ved+Havet,+Esbjerg",
         "distance": "~ 42 Min.",
+        "photo":    "content_fotos/mennesket.jpg",
     },
     {
         "name":     "⛴️ Fanø (Inselausflug)",
@@ -227,6 +245,7 @@ ATTRACTIONS = [
         "link":     "https://www.visitfanoe.dk/",
         "maps":     f"https://www.google.com/maps/dir/{HOUSE_ADDR}/Esbjerg+F%C3%A6rgehavn",
         "distance": "~ 45 Min. + Fähre",
+        "photo":    "content_fotos/fanoe.jpg",
     },
     {
         "name":     "\U0001F4A7 Filsø",
@@ -234,6 +253,7 @@ ATTRACTIONS = [
         "link":     "https://naturstyrelsen.dk/naturoplevelser/naturguider/filsoe",
         "maps":     f"https://www.google.com/maps/dir/{HOUSE_ADDR}/Fils%C3%B8,+6830+Nr.+Nebel",
         "distance": "~ 12 Min.",
+        "photo":    "content_fotos/filsoe.jpg",
     },
     {
         "name":     "\U0001F9F1 Legoland Billund",
@@ -241,6 +261,7 @@ ATTRACTIONS = [
         "link":     "https://www.legoland.dk/",
         "maps":     f"https://www.google.com/maps/dir/{HOUSE_ADDR}/Legoland+Billund",
         "distance": "~ 1:15 h",
+        "photo":    "content_fotos/legoland.jpg",
     },
 ]
 
@@ -362,6 +383,11 @@ section{padding:5rem 1.5rem;max-width:1200px;margin:0 auto}
 .card{background:var(--wh);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.08);transition:transform .3s,box-shadow .3s}
 .sf .card{background:var(--sand-light)}.card:hover{transform:translateY(-4px);box-shadow:0 8px 30px rgba(0,0,0,.12)}
 .card .ph{width:100%;height:200px;background:linear-gradient(135deg,var(--sea-l),var(--sand));display:flex;align-items:center;justify-content:center;color:var(--sea);font-size:3rem}
+.card img.ph-img{width:100%;height:200px;object-fit:cover;cursor:pointer;transition:transform .3s}
+.card img.ph-img:hover{transform:scale(1.02)}
+.rmc.clickable{cursor:pointer;position:relative;overflow:hidden}
+.rmc.clickable img.room-thumb{width:100%;height:100px;object-fit:cover;border-radius:8px;margin-bottom:.5rem}
+.rs img.rs-img{width:100%;height:120px;object-fit:cover;border-radius:8px;margin-bottom:.8rem;cursor:pointer}
 .cb{padding:1.5rem}.cb h3{font-size:1.15rem;margin-bottom:.5rem}.cb p{color:var(--gr);font-size:.93rem}
 .cb a.more{display:inline-block;margin-top:.5rem;font-size:.85rem;font-weight:500;color:var(--sea);text-decoration:none}
 .cb a.more:hover{color:var(--tc);text-decoration:underline}
@@ -410,7 +436,8 @@ JS = r"""
 function uc(){var t=new Date('__COUNTDOWN__'),n=new Date(),d=t-n;if(d<=0){document.getElementById('cd').innerHTML='<p style="font-size:1.5rem">🎉 Der Urlaub hat begonnen!</p>';return}var dd=Math.floor(d/864e5),hh=Math.floor(d%864e5/36e5),mm=Math.floor(d%36e5/6e4),ss=Math.floor(d%6e4/1e3);document.getElementById('cd-d').textContent=dd;document.getElementById('cd-h').textContent=('0'+hh).slice(-2);document.getElementById('cd-m').textContent=('0'+mm).slice(-2);document.getElementById('cd-s').textContent=('0'+ss).slice(-2)}uc();setInterval(uc,1e3);
 document.querySelectorAll('nav a').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();var t=document.querySelector(this.getAttribute('href'));if(t)window.scrollTo({top:t.getBoundingClientRect().top+window.pageYOffset-50,behavior:'smooth'})})});
 var lb=document.getElementById('lightbox'),lbImg=document.getElementById('lb-img');
-document.querySelectorAll('.gal img').forEach(function(img){img.addEventListener('click',function(){lbImg.src=this.src;lb.classList.add('active')})});
+document.querySelectorAll('.gal img, .card img.ph-img, .rs img.rs-img').forEach(function(img){img.addEventListener('click',function(){lbImg.src=this.src;lb.classList.add('active')})});
+document.querySelectorAll('.rmc.clickable').forEach(function(el){el.addEventListener('click',function(){var s=this.dataset.img;if(s){lbImg.src=s;lb.classList.add('active')}})});
 lb.addEventListener('click',function(){lb.classList.remove('active')});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('active')});
 """.replace("__COUNTDOWN__", COUNTDOWN_TARGET)
@@ -423,7 +450,16 @@ def features_html():
     return "".join(f'<div class="ii"><span class="em">{e}</span> {t}</div>' for e, t in ACCOMMODATION["features"])
 
 def rooms_html():
-    return "".join(f'<div class="rmc"><div class="ro">\U0001F6CC</div><h4>{n}</h4><p>{d}</p></div>' for n, d in ACCOMMODATION["rooms"])
+    out = []
+    for n, d, photo in ACCOMMODATION["rooms"]:
+        if photo:
+            out.append(
+                f'<div class="rmc clickable" data-img="{photo}" title="Klick fuer Foto">'
+                f'<img class="room-thumb" src="{photo}" alt="{n}"><h4>{n}</h4><p>{d} \U0001F4F7</p></div>'
+            )
+        else:
+            out.append(f'<div class="rmc"><div class="ro">\U0001F6CC</div><h4>{n}</h4><p>{d}</p></div>')
+    return "".join(out)
 
 def gallery_html():
     fotos = fotos_sorted()
@@ -438,16 +474,23 @@ def weather_html():
         for i, (icon, val, lbl) in enumerate(WEATHER)
     )
 
+def _card_media(photo, fallback_emoji):
+    if photo:
+        return f'<img class="ph-img" src="{photo}" alt="" loading="lazy">'
+    return f'<div class="ph">{fallback_emoji}</div>'
+
 def beaches_html():
     return "".join(
-        f'<div class="card"><div class="ph">\U0001F3D6️</div><div class="cb"><h3>{b["name"]}</h3><p>{b["desc"]}</p>'
+        f'<div class="card">{_card_media(b.get("photo"), "\U0001F3D6️")}'
+        f'<div class="cb"><h3>{b["name"]}</h3><p>{b["desc"]}</p>'
         f'<a class="more" href="{b["maps"]}" target="_blank">\U0001F697 Route</a><br>'
         f'<span class="tag">{b["tag"]}</span></div></div>' for b in BEACHES
     )
 
 def attractions_html():
     return "".join(
-        f'<div class="card"><div class="ph">\U0001F5FA️</div><div class="cb"><h3>{a["name"]}</h3><p>{a["desc"]}</p>'
+        f'<div class="card">{_card_media(a.get("photo"), "\U0001F5FA️")}'
+        f'<div class="cb"><h3>{a["name"]}</h3><p>{a["desc"]}</p>'
         f'<a class="more" href="{a["link"]}" target="_blank">→ Info</a> · '
         f'<a class="more" href="{a["maps"]}" target="_blank">\U0001F697 Route</a><br>'
         f'<span class="tag">\U0001F697 {a["distance"]}</span></div></div>' for a in ATTRACTIONS
@@ -469,11 +512,15 @@ def shopping_html():
     )
 
 def rest_stops_html():
-    return "".join(
-        f'<div class="rs"><h4>{r["name"]}</h4><div class="rsl">{r["loc"]}</div><p>{r["desc"]}</p>'
-        f'<a class="rslink" href="{r["link"]}" target="_blank">→ Website</a> · '
-        f'<a class="rslink" href="{r["maps"]}" target="_blank">\U0001F4CD Route</a></div>' for r in REST_STOPS
-    )
+    out = []
+    for r in REST_STOPS:
+        img_html = f'<img class="rs-img" src="{r["photo"]}" alt="" loading="lazy">' if r.get("photo") else ""
+        out.append(
+            f'<div class="rs">{img_html}<h4>{r["name"]}</h4><div class="rsl">{r["loc"]}</div><p>{r["desc"]}</p>'
+            f'<a class="rslink" href="{r["link"]}" target="_blank">→ Website</a> · '
+            f'<a class="rslink" href="{r["maps"]}" target="_blank">\U0001F4CD Route</a></div>'
+        )
+    return "".join(out)
 
 
 html = f"""<!DOCTYPE html>
@@ -531,10 +578,12 @@ html = f"""<!DOCTYPE html>
 
 <h3 style="margin:2rem 0 .5rem">Hausordnung</h3>
 <div class="rg">
-<div class="ri"><span class="ric">\U0001F551</span><div><strong>Check-in</strong> ab 15:00 Uhr</div></div>
-<div class="ri"><span class="ric">\U0001F559</span><div><strong>Check-out</strong> TODO Uhr</div></div>
+<div class="ri"><span class="ric">\U0001F551</span><div><strong>Check-in</strong> Sa 22.08.2026 ab 15:00 Uhr</div></div>
+<div class="ri"><span class="ric">\U0001F559</span><div><strong>Check-out</strong> Sa 29.08.2026 bis 10:00 Uhr</div></div>
+<div class="ri"><span class="ric">\U0001F465</span><div><strong>Max. Belegung</strong> 4 Personen</div></div>
 <div class="ri"><span class="ric">\U0001F436</span><div><strong>Haustiere</strong> erlaubt (max. 2)</div></div>
 <div class="ri"><span class="ric">\U0001F6AC</span><div><strong>Nichtraucherhaus</strong></div></div>
+<div class="ri"><span class="ric">⭐</span><div><strong>3 Sterne</strong> (esmark-Klassifizierung)</div></div>
 </div>
 </section>
 
