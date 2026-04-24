@@ -1,1 +1,5 @@
 zugangsdaten.txt
+haus_fotos/_original/
+__pycache__/
+*.pyc
+

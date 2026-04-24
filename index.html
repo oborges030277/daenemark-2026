@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daenemark 2026 – TODO Unterkunft</title>
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<meta name="googlebot" content="noindex,nofollow">
+<title>Daenemark 2026 – Holzhaus am Duenenrand</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -17,11 +19,11 @@ nav ul{display:flex;list-style:none;max-width:1200px;margin:0 auto;padding:0 1re
 nav ul::-webkit-scrollbar{display:none}
 nav li a{display:block;padding:1rem .8rem;color:var(--sand);text-decoration:none;font-size:.85rem;font-weight:500;white-space:nowrap}
 nav li a:hover{color:var(--tc)}
-.hero{position:relative;height:100vh;min-height:600px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden;background:linear-gradient(135deg,#0B4F6C,#063B52)}
-.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.5)}
+.hero{position:relative;height:100vh;min-height:600px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.55)}
 .hero-content{position:relative;z-index:1;padding:2rem}
 .hero h1{font-size:clamp(2.5rem,8vw,5rem);margin-bottom:.5rem;text-shadow:2px 2px 20px rgba(0,0,0,.5)}
-.hero .sub{font-size:clamp(1rem,3vw,1.5rem);font-weight:300;margin-bottom:2rem;opacity:.9}
+.hero .sub{font-size:clamp(1rem,3vw,1.5rem);font-weight:300;margin-bottom:2rem;opacity:.95}
 .cd{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-top:1rem}
 .cd-i{background:rgba(255,255,255,.15);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);border-radius:12px;padding:1.2rem 1.5rem;min-width:90px}
 .cd-i .n{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:700;display:block;line-height:1}
@@ -40,11 +42,13 @@ section{padding:5rem 1.5rem;max-width:1200px;margin:0 auto}
 .cb a.more:hover{color:var(--tc);text-decoration:underline}
 .tag{display:inline-block;background:var(--sea-l);color:var(--sea);padding:.2rem .7rem;border-radius:20px;font-size:.8rem;font-weight:500;margin-top:.6rem;margin-right:.2rem}
 .tag.dog{background:#FEF3C7;color:#92400E}
-.tag.todo{background:#FEE2E2;color:#991B1B}
-.ig{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1rem;margin:1.5rem 0}
+.ig{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;margin:1.5rem 0}
 .ii{display:flex;align-items:center;gap:.7rem;padding:.7rem;background:var(--sand-light);border-radius:10px;font-size:.9rem}
 .sf .ii{background:var(--wh)}.ii .em{font-size:1.3rem}
 .ib{background:var(--sea-l);border-left:4px solid var(--sea);padding:1.2rem 1.5rem;border-radius:0 10px 10px 0;margin:1.5rem 0}
+.ib.dog{background:#ECFDF5;border-color:#10B981}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin:1.5rem 0}
+.gal img{width:100%;height:200px;object-fit:cover;border-radius:12px;transition:transform .3s;cursor:pointer}.gal img:hover{transform:scale(1.03)}
 .wg{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.5rem;margin:1.5rem 0}
 .wc{text-align:center;padding:2rem 1.5rem;background:linear-gradient(135deg,var(--sea),var(--sea-d));color:#fff;border-radius:16px}
 .wc .wi{font-size:2.5rem;margin-bottom:.5rem}.wc .wv{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700}.wc .wl{font-size:.85rem;opacity:.8;margin-top:.25rem}
@@ -68,16 +72,20 @@ section{padding:5rem 1.5rem;max-width:1200px;margin:0 auto}
 .sl{list-style:none}.sl li{padding:1rem 1.2rem;background:var(--sand-light);border-radius:10px;margin-bottom:.7rem;display:flex;align-items:flex-start;gap:.7rem}
 .sl li .sli{font-size:1.3rem;flex-shrink:0;margin-top:2px}.sl li strong{display:block;margin-bottom:.2rem}.sl li span{font-size:.9rem;color:var(--gr)}
 .sl li a{font-size:.8rem;display:inline-block;margin-top:.3rem}
-.map-ph{width:100%;height:400px;border-radius:16px;background:linear-gradient(135deg,var(--sea-l),var(--sand));display:flex;align-items:center;justify-content:center;color:var(--sea);font-size:1.2rem;margin-top:1.5rem;box-shadow:0 4px 20px rgba(0,0,0,.1)}
+.map-ph{width:100%;height:400px;border-radius:16px;background:linear-gradient(135deg,var(--sea-l),var(--sand));display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--sea);gap:1rem;margin-top:1.5rem;box-shadow:0 4px 20px rgba(0,0,0,.1)}
+.lb-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:2000;cursor:pointer;align-items:center;justify-content:center}
+.lb-overlay.active{display:flex}
+.lb-overlay img{max-width:92vw;max-height:90vh;border-radius:8px;box-shadow:0 8px 40px rgba(0,0,0,.5)}
+.lb-close{position:fixed;top:1rem;right:1.5rem;color:#fff;font-size:2.5rem;cursor:pointer;z-index:2001;line-height:1}
 footer{background:var(--sea-d);color:var(--sand);text-align:center;padding:2rem 1.5rem;font-size:.85rem}
-@media(max-width:768px){nav li a{padding:.8rem .6rem;font-size:.75rem}section{padding:3rem 1rem}.cd{gap:.7rem}.cd-i{padding:.8rem 1rem;min-width:70px}.cd-i .n{font-size:1.8rem}.cg,.rl{grid-template-columns:1fr}}
+@media(max-width:768px){nav li a{padding:.8rem .6rem;font-size:.75rem}section{padding:3rem 1rem}.cd{gap:.7rem}.cd-i{padding:.8rem 1rem;min-width:70px}.cd-i .n{font-size:1.8rem}.cg,.rl{grid-template-columns:1fr}.gal{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
 
 <nav><ul>
 <li><a href="#hero">Start</a></li>
-<li><a href="#villa">Unterkunft</a></li>
+<li><a href="#haus">Unterkunft</a></li>
 <li><a href="#anreise">Anreise</a></li>
 <li><a href="#wetter">Wetter</a></li>
 <li><a href="#straende">Strände</a></li>
@@ -88,10 +96,10 @@ footer{background:var(--sea-d);color:var(--sand);text-align:center;padding:2rem 
 </ul></nav>
 
 <section class="hero" id="hero">
-<div class="hero-bg" style=""></div>
+<div class="hero-bg" style="background-image:url('haus_fotos/foto_511397.jpg')"></div>
 <div class="hero-content">
 <h1>Daenemark 2026</h1>
-<p class="sub">Unterkunft · Datum folgt</p>
+<p class="sub">Henne Strand · 22. – 29. August 2026</p>
 <div class="cd" id="cd">
 <div class="cd-i"><span class="n" id="cd-d">--</span><span class="l">Tage</span></div>
 <div class="cd-i"><span class="n" id="cd-h">--</span><span class="l">Stunden</span></div>
@@ -101,99 +109,112 @@ footer{background:var(--sea-d);color:var(--sand);text-align:center;padding:2rem 
 </section>
 
 <!-- UNTERKUNFT -->
-<section id="villa">
-<h2 class="st">Die Unterkunft</h2>
-<p class="ss">TODO Unterkunft · TODO Ort, Daenemark ·
-<a href="#" target="_blank">📷 Fotos &amp; Details</a> ·
-<a href="#" target="_blank">📍 Google Maps</a></p>
+<section id="haus">
+<h2 class="st">Das Ferienhaus</h2>
+<p class="ss">Holzhaus am Duenenrand · Henne Strand · 400 m zum Nordseestrand ·
+<a href="https://esmark.de/ferienhaus-40789/" target="_blank">📷 esmark.de</a></p>
 
-<div class="ib"><strong>⚠️ Platzhalter:</strong> Details zur Unterkunft folgen noch.</div>
+<div class="gal"><img src="haus_fotos/foto_446171.jpg" alt="Ferienhaus Foto" loading="lazy"><img src="haus_fotos/foto_446644.jpg" alt="Ferienhaus Foto" loading="lazy"><img src="haus_fotos/foto_446645.jpg" alt="Ferienhaus Foto" loading="lazy"><img src="haus_fotos/foto_446646.jpg" alt="Ferienhaus Foto" loading="lazy"><img src="haus_fotos/foto_446647.jpg" alt="Ferienhaus Foto" loading="lazy"><img src="haus_fotos/foto_446648.jpg" alt="Ferienhaus Foto" loading="lazy"><img src="haus_fotos/foto_446649.jpg" alt="Ferienhaus Foto" loading="lazy"><img src="haus_fotos/foto_446650.jpg" alt="Ferienhaus Foto" loading="lazy"><img src="haus_fotos/foto_446651.jpg" alt="Ferienhaus Foto" loading="lazy"><img src="haus_fotos/foto_446652.jpg" alt="Ferienhaus Foto" loading="lazy"><img src="haus_fotos/foto_446653.jpg" alt="Ferienhaus Foto" loading="lazy"><img src="haus_fotos/foto_446654.jpg" alt="Ferienhaus Foto" loading="lazy"><img src="haus_fotos/foto_446655.jpg" alt="Ferienhaus Foto" loading="lazy"><img src="haus_fotos/foto_446656.jpg" alt="Ferienhaus Foto" loading="lazy"><img src="haus_fotos/foto_446657.jpg" alt="Ferienhaus Foto" loading="lazy"><img src="haus_fotos/foto_446658.jpg" alt="Ferienhaus Foto" loading="lazy"><img src="haus_fotos/foto_511397.jpg" alt="Ferienhaus Foto" loading="lazy"><img src="haus_fotos/foto_511398.jpg" alt="Ferienhaus Foto" loading="lazy"><img src="haus_fotos/foto_511399.jpg" alt="Ferienhaus Foto" loading="lazy"><img src="haus_fotos/foto_511400.jpg" alt="Ferienhaus Foto" loading="lazy"><img src="haus_fotos/foto_511401.jpg" alt="Ferienhaus Foto" loading="lazy"><img src="haus_fotos/foto_511402.jpg" alt="Ferienhaus Foto" loading="lazy"><img src="haus_fotos/foto_511403.jpg" alt="Ferienhaus Foto" loading="lazy"><img src="haus_fotos/foto_511404.jpg" alt="Ferienhaus Foto" loading="lazy"><img src="haus_fotos/foto_511405.jpg" alt="Ferienhaus Foto" loading="lazy"><img src="haus_fotos/foto_511406.jpg" alt="Ferienhaus Foto" loading="lazy"><img src="haus_fotos/foto_511407.jpg" alt="Ferienhaus Foto" loading="lazy"><img src="haus_fotos/foto_511408.jpg" alt="Ferienhaus Foto" loading="lazy"><img src="haus_fotos/foto_511409.jpg" alt="Ferienhaus Foto" loading="lazy"></div>
 
 <h3 style="margin:2rem 0 .5rem">Ausstattung</h3>
-<div class="ig"><div class="ii"><span class="em">🏊</span> Pool / Sauna</div><div class="ii"><span class="em">🛏</span> Schlafzimmer</div><div class="ii"><span class="em">🛁</span> Badezimmer</div><div class="ii"><span class="em">📏</span> Wohnflaeche</div><div class="ii"><span class="em">🍳</span> Kueche</div><div class="ii"><span class="em">📶</span> WLAN</div><div class="ii"><span class="em">🐶</span> Haustierfreundlich</div><div class="ii"><span class="em">🌻</span> Garten / Terrasse</div></div>
+<div class="ig"><div class="ii"><span class="em">🔥</span> Kaminofen</div><div class="ii"><span class="em">🛏️</span> 3 Schlafzimmer</div><div class="ii"><span class="em">🛁</span> 1 Badezimmer</div><div class="ii"><span class="em">📏</span> 67 m² auf 1.413 m²</div><div class="ii"><span class="em">🍳</span> Küche mit Geschirrspüler</div><div class="ii"><span class="em">🧺</span> Waschmaschine</div><div class="ii"><span class="em">📶</span> Glasfaser-WLAN</div><div class="ii"><span class="em">🐶</span> Haustiere (max. 2)</div><div class="ii"><span class="em">☀️</span> Terrasse offen + überdacht</div><div class="ii"><span class="em">🍖</span> Gasgrill</div><div class="ii"><span class="em">📺</span> Flachbildfernseher</div><div class="ii"><span class="em">🌳</span> Naturgrundstück</div></div>
 
 <h3 style="margin:2rem 0 .5rem">Zimmeraufteilung</h3>
-<div class="rmg"><div class="rmc"><div class="ro">🛌</div><h4>Schlafzimmer 1</h4><p>TODO Betten</p></div><div class="rmc"><div class="ro">🛌</div><h4>Schlafzimmer 2</h4><p>TODO Betten</p></div><div class="rmc"><div class="ro">🛌</div><h4>Wohnzimmer</h4><p>TODO Schlafsofa</p></div></div>
+<div class="rmg"><div class="rmc"><div class="ro">🛌</div><h4>Schlafzimmer 1</h4><p>1 Doppelbett</p></div><div class="rmc"><div class="ro">🛌</div><h4>Schlafzimmer 2</h4><p>2 Einzelbetten</p></div><div class="rmc"><div class="ro">🛌</div><h4>Schlafzimmer 3</h4><p>1 Etagenbett</p></div><div class="rmc"><div class="ro">🛌</div><h4>Badezimmer</h4><p>1 Bad</p></div></div>
 
 <h3 style="margin:2rem 0 .5rem">Hausordnung</h3>
 <div class="rg">
-<div class="ri"><span class="ric">🕑</span><div><strong>Check-in</strong> TODO Uhr</div></div>
+<div class="ri"><span class="ric">🕑</span><div><strong>Check-in</strong> ab 15:00 Uhr</div></div>
 <div class="ri"><span class="ric">🕙</span><div><strong>Check-out</strong> TODO Uhr</div></div>
-<div class="ri"><span class="ric">🐶</span><div><strong>Haustiere</strong> TODO</div></div>
+<div class="ri"><span class="ric">🐶</span><div><strong>Haustiere</strong> erlaubt (max. 2)</div></div>
+<div class="ri"><span class="ric">🚬</span><div><strong>Nichtraucherhaus</strong></div></div>
 </div>
 </section>
 
 <!-- ANREISE -->
 <section id="anreise" class="sf"><div class="si">
 <h2 class="st">Anreise</h2>
-<p class="ss">~TODO km · ca. TODO Std. Fahrt ·
-<a href="#" target="_blank">🚗 Komplette Route auf Google Maps</a></p>
+<p class="ss">~640 km · ca. 7 Std. Fahrt von Senden ·
+<a href="https://www.google.com/maps/dir/Senden,+Nordrhein-Westfalen/Henne+Strand,+6854+Denmark" target="_blank">🚗 Komplette Route auf Google Maps</a></p>
 
-<div class="ib"><strong>⚠️ Platzhalter:</strong> Route und Raststaetten folgen noch.</div>
-
-<h3 style="margin:2rem 0 1rem">Maut &amp; Faehren</h3>
+<h3 style="margin:2rem 0 1rem">Route-Hinweise</h3>
 <div class="tc-grid">
-<div class="tip"><h4>🇩🇪 Deutschland</h4><p>TODO: Hinweise zu Autobahn &amp; Baustellen.</p></div>
-<div class="tip"><h4>🇩🇰 Daenemark</h4><p>TODO: Brueckenmaut Storebaelt / Oeresund / Faehren.</p></div>
-<div class="tip"><h4>⛽ Tanken</h4><p>TODO: Preisvergleich DE/DK, Bezahlung mit Karte.</p></div>
+<div class="tip"><h4>🇩🇪 Deutschland</h4><p>A1 Richtung Bremen → Hamburg → A7 Richtung Flensburg. Samstags im Hochsommer Stau-Gefahr um Hamburg – früh losfahren.</p></div>
+<div class="tip"><h4>🇩🇰 Daenemark</h4><p>Ab Grenze über E45 Richtung Kolding/Vejle, dann Abfahrt 73 Varde → Henne Strand. Keine Maut auf dänischen Autobahnen.</p></div>
+<div class="tip"><h4>⛽ Tanken</h4><p>Kraftstoff in DK ist teurer als in DE. <strong>Noch in Deutschland volltanken</strong> (z.B. Hüttener Berge Ost).</p></div>
+<div class="tip"><h4>🚦 Tempolimit DK</h4><p>Motorvej 130, sonst 110 (Schild beachten!), Landstraße 80, innerorts 50. Licht auch tagsüber Pflicht.</p></div>
 </div>
 
 <h3 style="margin:2rem 0 1rem">🛑 Empfohlene Raststätten</h3>
-<div class="rst"><div class="rs"><h4>Raststaette 1</h4><div class="rsl">TODO km</div><p>TODO Beschreibung</p><a class="rslink" href="#" target="_blank">→ Website</a> · <a class="rslink" href="#" target="_blank">📍 Route</a></div><div class="rs"><h4>Raststaette 2</h4><div class="rsl">TODO km</div><p>TODO Beschreibung</p><a class="rslink" href="#" target="_blank">→ Website</a> · <a class="rslink" href="#" target="_blank">📍 Route</a></div><div class="rs"><h4>Raststaette 3</h4><div class="rsl">TODO km</div><p>TODO Beschreibung</p><a class="rslink" href="#" target="_blank">→ Website</a> · <a class="rslink" href="#" target="_blank">📍 Route</a></div><div class="rs"><h4>Raststaette 4</h4><div class="rsl">TODO km</div><p>TODO Beschreibung</p><a class="rslink" href="#" target="_blank">→ Website</a> · <a class="rslink" href="#" target="_blank">📍 Route</a></div></div>
+<div class="rst"><div class="rs"><h4>🌉 Dammer Berge Ost</h4><div class="rsl">A1 · Holdorf · ~105 km / 1:10 h</div><p>Brückenrasthöf – Restaurant spannt sich 103 m über die A1. Burger King, Nordsee, Shell, Spielplatz, Sanifair-WC.</p><a class="rslink" href="https://www.serways.de/standorte/dammer-berge-ost/" target="_blank">→ Website</a> · <a class="rslink" href="https://www.google.com/maps/dir/Senden,+Nordrhein-Westfalen/Serways+Rastst%C3%A4tte+Dammer+Berge+Ost,+49451+Holdorf" target="_blank">📍 Route</a></div><div class="rs"><h4>⛽ Grundbergsee Süd</h4><div class="rsl">A1 · Sottrum · ~265 km / 2:45 h</div><p>Modern gebaute Rastanlage mit Burger King, Aral-Tanke und grossem Wickelbereich. Guter Tank-Stopp vor Hamburg.</p><a class="rslink" href="https://www.serways.de/standorte/grundbergsee-sued/" target="_blank">→ Website</a> · <a class="rslink" href="https://www.google.com/maps/dir/Senden,+Nordrhein-Westfalen/Serways+Grundbergsee+S%C3%BCd" target="_blank">📍 Route</a></div><div class="rs"><h4>🍽️ Autohof Bockel</h4><div class="rsl">A1 Abfahrt 49 · ~310 km / 3:15 h</div><p>Großer Aral-Autohof mit günstigem Service-Restaurant (Schnitzel, Fisch, Pizza). Beliebte Alternative zu den Brücken-Raststaetten.</p><a class="rslink" href="https://autohof-bockel.de/" target="_blank">→ Website</a> · <a class="rslink" href="https://www.google.com/maps/dir/Senden,+Nordrhein-Westfalen/Aral+Autohof+Bockel,+27386+Bockel" target="_blank">📍 Route</a></div><div class="rs"><h4>🌲 Hüttener Berge Ost</h4><div class="rsl">A7 · Alt Duvenstedt · ~450 km / 4:45 h</div><p>Landschaftlich sehr schön mitten im Naturpark Hüttener Berge. Letzter grösserer Stopp vor der dänischen Grenze – hier noch volltanken!</p><a class="rslink" href="https://www.raststaetten.de/standorte/huettener-berge-ost/" target="_blank">→ Website</a> · <a class="rslink" href="https://www.google.com/maps/dir/Senden,+Nordrhein-Westfalen/Serways+H%C3%BCttener+Berge+Ost" target="_blank">📍 Route</a></div><div class="rs"><h4>🇩🇰 Rasteplads Frøslev Øst</h4><div class="rsl">E45 · kurz hinter Grenze · ~520 km / 5:30 h</div><p>Erste dänische Rastanlage nach Padborg. Circle K mit Tankstelle, Imbiss, Spielplatz und seit 2024 Schnellladesaeulen. Hunde dürfen an der Leine auf die Grünflaeche.</p><a class="rslink" href="https://www.vejdirektoratet.dk/trafikant/rastepladser-din-pause-paa-turen" target="_blank">→ Website</a> · <a class="rslink" href="https://www.google.com/maps/dir/Senden,+Nordrhein-Westfalen/Rasteplads+Fr%C3%B8slev+%C3%98st" target="_blank">📍 Route</a></div><div class="rs"><h4>🛣️ Rasteplads Skærup Vest</h4><div class="rsl">E45 · südlich Vejle · ~600 km / 6:30 h</div><p>Letzter Stretch-Stopp vor Abzweig Richtung Varde/Henne. OK/Circle K, Imbiss, WC, Spielplatz, seit 2026 neuer Schnellladepark.</p><a class="rslink" href="https://www.vejdirektoratet.dk/trafikant/rastepladser-din-pause-paa-turen" target="_blank">→ Website</a> · <a class="rslink" href="https://www.google.com/maps/dir/Senden,+Nordrhein-Westfalen/Rasteplads+Sk%C3%A6rup+Vest" target="_blank">📍 Route</a></div></div>
 
 </div></section>
 
 <!-- WETTER -->
 <section id="wetter">
-<h2 class="st">Wetter im Sommer</h2>
-<p class="ss">Durchschnittswerte fuer Daenemark – TODO genauer Zeitraum</p>
-<div class="wg"><div class="wc" style=""><div class="wi">☀️</div><div class="wv">TODO °C</div><div class="wl">Lufttemperatur</div></div><div class="wc" style="background:linear-gradient(135deg,#0891b2,#164e63)"><div class="wi">🌊</div><div class="wv">TODO °C</div><div class="wl">Wassertemperatur</div></div><div class="wc" style="background:linear-gradient(135deg,#d97706,#92400e)"><div class="wi">🌞</div><div class="wv">TODO Std.</div><div class="wl">Sonnenstunden / Tag</div></div><div class="wc" style="background:linear-gradient(135deg,#6366f1,#312e81)"><div class="wi">🌧️</div><div class="wv">TODO Tage</div><div class="wl">Regentage / Monat</div></div></div>
+<h2 class="st">Wetter Ende August</h2>
+<p class="ss">Durchschnittswerte für die Westküste Daenemarks (Esbjerg-Station) · Quelle: climate-data.org</p>
+<div class="wg"><div class="wc" style=""><div class="wi">☀️</div><div class="wv">18 – 20 °C</div><div class="wl">Lufttemperatur</div></div><div class="wc" style="background:linear-gradient(135deg,#0891b2,#164e63)"><div class="wi">🌊</div><div class="wv">17 – 19 °C</div><div class="wl">Wassertemperatur</div></div><div class="wc" style="background:linear-gradient(135deg,#d97706,#92400e)"><div class="wi">🌞</div><div class="wv">~ 6 – 7 Std.</div><div class="wl">Sonnenstunden / Tag</div></div><div class="wc" style="background:linear-gradient(135deg,#6366f1,#312e81)"><div class="wi">🌧️</div><div class="wv">~ 12 Tage</div><div class="wl">Regentage / Monat</div></div></div>
+<div class="ib" style="margin-top:1.5rem"><strong>🏖️ Hinweis:</strong> Nordseeküsten-Wetter ist wechselhaft. Windjacke und Regenschutz immer dabei, auch bei Sonne.</div>
 </section>
 
 <!-- STRAENDE -->
 <section id="straende" class="sf"><div class="si">
 <h2 class="st">Strände</h2>
-<p class="ss">Nordseekueste &amp; Ostseestrand – TODO Auswahl</p>
-<div class="ib"><strong>🐶 Hinweis:</strong> Hundefreundlichkeit je nach Strand pruefen (TODO).</div>
-<div class="cg"><div class="card"><div class="ph">🏖️</div><div class="cb"><h3>Strand 1</h3><p>TODO Beschreibung</p><a class="more" href="#" target="_blank">🚗 Route</a><br><span class="tag todo">Platzhalter</span></div></div><div class="card"><div class="ph">🏖️</div><div class="cb"><h3>Strand 2</h3><p>TODO Beschreibung</p><a class="more" href="#" target="_blank">🚗 Route</a><br><span class="tag todo">Platzhalter</span></div></div><div class="card"><div class="ph">🏖️</div><div class="cb"><h3>Strand 3</h3><p>TODO Beschreibung</p><a class="more" href="#" target="_blank">🚗 Route</a><br><span class="tag todo">Platzhalter</span></div></div><div class="card"><div class="ph">🏖️</div><div class="cb"><h3>Strand 4</h3><p>TODO Beschreibung</p><a class="more" href="#" target="_blank">🚗 Route</a><br><span class="tag todo">Platzhalter</span></div></div></div>
+<p class="ss">Feiner weisser Sand, hohe Dünen, weite Nordsee</p>
+<div class="ib dog"><strong>🐶 Hunde-Regel Daenemark:</strong> Vom 1. April bis 30. September müssen Hunde am Strand angeleint sein, außerhalb der Saison dürfen sie frei laufen. An Blauflagge-Stränden sind Hunde vom 1. Juni bis 15. September ganz verboten. In Öksby gibt es einen ganzjährig freien Hundewald.</div>
+<div class="cg"><div class="card"><div class="ph">🏖️</div><div class="cb"><h3>Henne Strand (Hauptstrand)</h3><p>Breiter, feiner Sandstrand direkt am Ort, ca. 400 m vom Haus. Autofrei, Lifeguard Ende Juni bis Ende August. Starke Strömung – auf Warnflaggen achten.</p><a class="more" href="https://www.google.com/maps/dir/Henne+Strand,+6854+Denmark/Henne+Strand+beach" target="_blank">🚗 Route</a><br><span class="tag">Hauptstrand · 400 m</span></div></div><div class="card"><div class="ph">🏖️</div><div class="cb"><h3>Henne Mølle Å</h3><p>Ruhiger Natur-Sandstrand nördlich vom Ort, wo die Henne Mølle Å in die Nordsee mündet. Weite Dünen, kaum Infrastruktur – perfekt für lange Spaziergänge.</p><a class="more" href="https://www.google.com/maps/dir/Henne+Strand,+6854+Denmark/Henne+M%C3%B8lle+%C3%85+Strand" target="_blank">🚗 Route</a><br><span class="tag">Geheimtipp</span></div></div><div class="card"><div class="ph">🏖️</div><div class="cb"><h3>Houstrup Strand</h3><p>Weitlaeufiger Sandstrand nord-westlich mit grosser Dünenlandschaft. Weniger touristisch als Blåvand, gute Brandungsbedingungen.</p><a class="more" href="https://www.google.com/maps/dir/Henne+Strand,+6854+Denmark/Houstrup+Strand" target="_blank">🚗 Route</a><br><span class="tag">Ruhig · Dünen</span></div></div><div class="card"><div class="ph">🏖️</div><div class="cb"><h3>Nymindegab Strand</h3><p>Nördlich von Henne am Übergang zum Ringkøbing Fjord. Breiter Sandstrand mit Dünen; in der Nähe die Tipperne-Vogelschutzgebiete.</p><a class="more" href="https://www.google.com/maps/dir/Henne+Strand,+6854+Denmark/Nymindegab+Strand" target="_blank">🚗 Route</a><br><span class="tag">Natur · Vögel</span></div></div><div class="card"><div class="ph">🏖️</div><div class="cb"><h3>Vejers Strand</h3><p>Klassischer befahrbarer Nordseestrand (man darf mit dem Auto auf den Sand!). Lifeguard im Sommer, Kiosk und Strand-Camping direkt nebenan – familienfreundlich.</p><a class="more" href="https://www.google.com/maps/dir/Henne+Strand,+6854+Denmark/Vejers+Strand" target="_blank">🚗 Route</a><br><span class="tag">Auto auf Strand · Familie</span></div></div><div class="card"><div class="ph">🏖️</div><div class="cb"><h3>Blåvand Strand</h3><p>Einer der bekanntesten Strände Daenemarks, westlichster Punkt des Landes. Feiner weisser Sand, Bunker-Skulpturen (Tirpitz-Stellung). Häufig mit der Blauen Flagge ausgezeichnet.</p><a class="more" href="https://www.google.com/maps/dir/Henne+Strand,+6854+Denmark/Bl%C3%A5vand+Strand" target="_blank">🚗 Route</a><br><span class="tag">Blaue Flagge · Highlight</span></div></div><div class="card"><div class="ph">🏖️</div><div class="cb"><h3>🐶 Hundewald Øksby</h3><p>Eingezäunter Hundewald nahe Blåvand – hier dürfen Hunde ganzjährig frei laufen. Praktisch an heissen Tagen als Schatten-Alternative zum Strand.</p><a class="more" href="https://www.google.com/maps/dir/Henne+Strand,+6854+Denmark/%C3%98ksby+Hundeskov" target="_blank">🚗 Route</a><br><span class="tag">🐶 Frei laufen ganzjährig</span></div></div></div>
 </div></section>
 
 <!-- AUSFLUGSZIELE -->
 <section id="ausfluge">
 <h2 class="st">Sehenswürdigkeiten &amp; Ausflüge</h2>
-<p class="ss">Natur, Geschichte und Kueste – TODO</p>
-<div class="cg"><div class="card"><div class="ph">🏛️</div><div class="cb"><h3>Sehenswuerdigkeit 1</h3><p>TODO Beschreibung</p><a class="more" href="#" target="_blank">→ Info</a> · <a class="more" href="#" target="_blank">🚗 Route</a><br><span class="tag">🚗 TODO</span></div></div><div class="card"><div class="ph">🏛️</div><div class="cb"><h3>Sehenswuerdigkeit 2</h3><p>TODO Beschreibung</p><a class="more" href="#" target="_blank">→ Info</a> · <a class="more" href="#" target="_blank">🚗 Route</a><br><span class="tag">🚗 TODO</span></div></div><div class="card"><div class="ph">🏛️</div><div class="cb"><h3>Sehenswuerdigkeit 3</h3><p>TODO Beschreibung</p><a class="more" href="#" target="_blank">→ Info</a> · <a class="more" href="#" target="_blank">🚗 Route</a><br><span class="tag">🚗 TODO</span></div></div><div class="card"><div class="ph">🏛️</div><div class="cb"><h3>Sehenswuerdigkeit 4</h3><p>TODO Beschreibung</p><a class="more" href="#" target="_blank">→ Info</a> · <a class="more" href="#" target="_blank">🚗 Route</a><br><span class="tag">🚗 TODO</span></div></div></div>
+<p class="ss">Natur, Geschichte und dänische Klassiker – alles im Umkreis von ~1 Stunde</p>
+<div class="cg"><div class="card"><div class="ph">🗺️</div><div class="cb"><h3>🏛️ Tirpitz-Museum, Blåvand</h3><p>Unterirdisches Museum im ehemaligen Atlantikwall-Bunker, 2017 von Bjarke Ingels (BIG) in die Dünen gebaut. Vier Ausstellungen: Atlantikwall, Bernstein, Westküsten-Geschichte und Wechsel. Eintritt Erwachsene 125 DKK, unter 18 frei.</p><a class="more" href="https://tirpitz.dk/" target="_blank">→ Info</a> · <a class="more" href="https://www.google.com/maps/dir/Henne+Strand,+6854+Denmark/Tirpitz,+Tirpitzvej+1,+6857+Bl%C3%A5vand" target="_blank">🚗 Route</a><br><span class="tag">🚗 ~ 30 Min.</span></div></div><div class="card"><div class="ph">🗺️</div><div class="cb"><h3>🏯 Blåvandshuk Fyr</h3><p>39 m hoher Leuchtturm (1900), westlichster Punkt Daenemarks. 170 Stufen zur Aussichtsplattform mit Blick auf Horns Rev und die Seehundsbank. Betrieben von Varde Museerne.</p><a class="more" href="https://www.vardemuseerne.dk/museum/blaavandshuk-fyr/" target="_blank">→ Info</a> · <a class="more" href="https://www.google.com/maps/dir/Henne+Strand,+6854+Denmark/Bl%C3%A5vandshuk+Fyr,+6857+Bl%C3%A5vand" target="_blank">🚗 Route</a><br><span class="tag">🚗 ~ 32 Min.</span></div></div><div class="card"><div class="ph">🗺️</div><div class="cb"><h3>⛪ Ribe – älteste Stadt Skandinaviens</h3><p>Um 710 n.Chr. gegründet. Dom aus dem 12. Jh. mit modernen Fresken von Carl-Henning Pedersen, Fachwerk-Altstadt mit Kopfsteinpflaster. Nachtwächter-Rundgang Mai–September täglich 20 und 22 Uhr.</p><a class="more" href="https://www.visitribe.dk/" target="_blank">→ Info</a> · <a class="more" href="https://www.google.com/maps/dir/Henne+Strand,+6854+Denmark/Ribe,+Denmark" target="_blank">🚗 Route</a><br><span class="tag">🚗 ~ 55 Min.</span></div></div><div class="card"><div class="ph">🗺️</div><div class="cb"><h3>🐟 Fiskeri- og Søfartsmuseet (Esbjerg)</h3><p>Saltwater-Aquarium und Seefahrts-/Fischereimuseum mit Robbenbecken (Fütterungen 11:00 und 14:30 Uhr). Außenbereich mit historischen Fischerbooten.</p><a class="more" href="https://www.fimus.dk/" target="_blank">→ Info</a> · <a class="more" href="https://www.google.com/maps/dir/Henne+Strand,+6854+Denmark/Fiskeri-+og+S%C3%B8fartsmuseet,+Tarphagevej+2,+6710+Esbjerg" target="_blank">🚗 Route</a><br><span class="tag">🚗 ~ 45 Min.</span></div></div><div class="card"><div class="ph">🗺️</div><div class="cb"><h3>🗿 Mennesket ved Havet</h3><p>9 m hohe Betonskulptur von Svend Wiig Hansen (1995) am Sædding Strand, Esbjerg. Vier sitzende weisse Männer, die aufs Meer schauen. Kostenlos, jederzeit zugänglich – gut kombinierbar mit Fimus-Museum.</p><a class="more" href="https://www.visitesbjerg.com/ln-int/esbjerg/man-meets-sea-gdk600115" target="_blank">→ Info</a> · <a class="more" href="https://www.google.com/maps/dir/Henne+Strand,+6854+Denmark/Mennesket+ved+Havet,+Esbjerg" target="_blank">🚗 Route</a><br><span class="tag">🚗 ~ 42 Min.</span></div></div><div class="card"><div class="ph">🗺️</div><div class="cb"><h3>⛴️ Fanø (Inselausflug)</h3><p>12-Minuten-Autofähre ab Esbjerg, halbstündlich in der Hochsaison. Breite Strände, reetgedeckte Seefahrerdoerfer Nordby und Sønderho. Letzteres mehrfach zum schönsten Dorf Daenemarks gewählt.</p><a class="more" href="https://www.visitfanoe.dk/" target="_blank">→ Info</a> · <a class="more" href="https://www.google.com/maps/dir/Henne+Strand,+6854+Denmark/Esbjerg+F%C3%A6rgehavn" target="_blank">🚗 Route</a><br><span class="tag">🚗 ~ 45 Min. + Fähre</span></div></div><div class="card"><div class="ph">🗺️</div><div class="cb"><h3>💧 Filsø</h3><p>Zweitgrösster See Jütlands (~915 ha), seit 2012 renaturiertes Vogelschutzgebiet. Aussichtsturm, markierte Wanderwege, 28-km-Radrunde um den See.</p><a class="more" href="https://naturstyrelsen.dk/naturoplevelser/naturguider/filsoe" target="_blank">→ Info</a> · <a class="more" href="https://www.google.com/maps/dir/Henne+Strand,+6854+Denmark/Fils%C3%B8,+6830+Nr.+Nebel" target="_blank">🚗 Route</a><br><span class="tag">🚗 ~ 12 Min.</span></div></div><div class="card"><div class="ph">🗺️</div><div class="cb"><h3>🧱 Legoland Billund</h3><p>Ältester und grösster Legoland-Park der Welt (1968). 65+ Attraktionen, Miniland aus ~65 Mio. Lego-Steinen. Im August verlängerte Öffnungszeiten bis 21 Uhr.</p><a class="more" href="https://www.legoland.dk/" target="_blank">→ Info</a> · <a class="more" href="https://www.google.com/maps/dir/Henne+Strand,+6854+Denmark/Legoland+Billund" target="_blank">🚗 Route</a><br><span class="tag">🚗 ~ 1:15 h</span></div></div></div>
 </section>
 
 <!-- RESTAURANTS -->
 <section id="restaurants" class="sf"><div class="si">
 <h2 class="st">Restaurants &amp; Essen</h2>
-<p class="ss">Smoerrebroed, Fisch &amp; daenische Klassiker – TODO</p>
-<div class="rl"><div class="rc"><div class="rci">🍴</div><div><h3>Restaurant 1</h3><div class="rloc">TODO Ort</div><p class="rdesc">TODO Beschreibung</p><a class="more" href="#" target="_blank">→ Website</a> · <a class="more" href="#" target="_blank">🚗 Route</a></div></div><div class="rc"><div class="rci">🍴</div><div><h3>Restaurant 2</h3><div class="rloc">TODO Ort</div><p class="rdesc">TODO Beschreibung</p><a class="more" href="#" target="_blank">→ Website</a> · <a class="more" href="#" target="_blank">🚗 Route</a></div></div><div class="rc"><div class="rci">🍴</div><div><h3>Restaurant 3</h3><div class="rloc">TODO Ort</div><p class="rdesc">TODO Beschreibung</p><a class="more" href="#" target="_blank">→ Website</a> · <a class="more" href="#" target="_blank">🚗 Route</a></div></div><div class="rc"><div class="rci">🍴</div><div><h3>Restaurant 4</h3><div class="rloc">TODO Ort</div><p class="rdesc">TODO Beschreibung</p><a class="more" href="#" target="_blank">→ Website</a> · <a class="more" href="#" target="_blank">🚗 Route</a></div></div></div>
+<p class="ss">Vom 2-Sterne-Kro bis zur Institutions-Eisdiele</p>
+<div class="rl"><div class="rc"><div class="rci">⭐</div><div><h3>Henne Kirkeby Kro</h3><div class="rloc">Henne Kirkeby · ~5 km</div><p class="rdesc">2-Sterne-Michelin-Restaurant von Paul Cunningham in einem restaurierten Kro aus dem 18. Jh. Saison 2026: 6. März – 19. Dezember. Mi 18–21, Do–Sa 12–21. Reservierung zwingend 2–3 Monate vorher.</p><a class="more" href="https://hennekirkebykro.dk/" target="_blank">→ Website</a> · <a class="more" href="https://www.google.com/maps/dir/Henne+Strand,+6854+Denmark/Henne+Kirkeby+Kro,+Strandvejen+234,+6854+Henne" target="_blank">🚗 Route</a></div></div><div class="rc"><div class="rci">🍳</div><div><h3>Strandgaarden Restaurant</h3><div class="rloc">Henne Strand · ~1 km</div><p class="rdesc">Traditionell-dänische Küche mit frischen, saisonalen Zutaten. Tripadvisor 4,3 (Rang 2 in Henne), Trustpilot 1000+ Bewertungen. Gemütliches Strandhaus-Ambiente.</p><a class="more" href="https://www.strandgaarden-henne.dk/" target="_blank">→ Website</a> · <a class="more" href="https://www.google.com/maps/dir/Henne+Strand,+6854+Denmark/Strandgaarden+Restaurant,+Klitvej+3,+6854+Henne" target="_blank">🚗 Route</a></div></div><div class="rc"><div class="rci">🍨</div><div><h3>Ishuset ved Henne Strand</h3><div class="rloc">Henne Strand Zentrum · ~1 km</div><p class="rdesc">Institution am Strand – #1 auf Tripadvisor (4,5 von 5). Eis, Waffeln, Kaffee, Snacks. Perfekter Stopp nach dem Strandtag.</p><a class="more" href="https://www.tripadvisor.com/Restaurant_Review-g4067331-d7973871-Reviews-Ishuset_Ved_Henne_Strand.html" target="_blank">→ Website</a> · <a class="more" href="https://www.google.com/maps/dir/Henne+Strand,+6854+Denmark/Ishuset+ved+Henne+Strand" target="_blank">🚗 Route</a></div></div><div class="rc"><div class="rci">🥖</div><div><h3>Købmand Hansens Bageri & Café</h3><div class="rloc">Henne Strand · ~1 km</div><p class="rdesc">Bäckerei, Café und Eisbar unter einem Dach. Wienerbrød, Kanelsnegle und belegte Brote – der Frühstücks-Treff am Ort.</p><a class="more" href="https://www.kobmand-hansen.dk/" target="_blank">→ Website</a> · <a class="more" href="https://www.google.com/maps/dir/Henne+Strand,+6854+Denmark/K%C3%B8bmand+Hansens+Bageri,+Strandvejen+450,+6854+Henne" target="_blank">🚗 Route</a></div></div><div class="rc"><div class="rci">🍕</div><div><h3>Taverna Colosseo</h3><div class="rloc">Henne Strand · ~1 km</div><p class="rdesc">Einzige Pizzeria im Ort – Pizza, Pasta und Steaks. Tripadvisor 3,3 (gemischtes Bild, aber praktisch für einen unkomplizierten Abend).</p><a class="more" href="https://www.tripadvisor.com/Restaurant_Review-g4067331-d6350616-Reviews-Taverna_Colosseo.html" target="_blank">→ Website</a> · <a class="more" href="https://www.google.com/maps/dir/Henne+Strand,+6854+Denmark/Taverna+Colosseo,+Henne+Strand" target="_blank">🚗 Route</a></div></div><div class="rc"><div class="rci">🍟</div><div><h3>Restaurant Sløjfen, Blåvand</h3><div class="rloc">Blåvandvej, Blåvand · ~35 km</div><p class="rdesc">Casual-Karte (Burger, Steak, Fisch, Kinderteller) direkt in Blåvand. Ideal zu kombinieren mit einem Ausflug zum Leuchtturm oder Tirpitz-Museum.</p><a class="more" href="https://sloejfen.dk/" target="_blank">→ Website</a> · <a class="more" href="https://www.google.com/maps/dir/Henne+Strand,+6854+Denmark/Restaurant+Sl%C3%B8jfen,+Bl%C3%A5vand" target="_blank">🚗 Route</a></div></div></div>
 </div></section>
 
 <!-- EINKAUFEN -->
 <section id="einkaufen">
 <h2 class="st">Einkaufen</h2>
-<p class="ss">Supermärkte, Maerkte &amp; Shopping</p>
-<ul class="sl"><li><span class="sli">🛒</span><div><strong>Supermarkt</strong><span>TODO Adresse / Details</span><br><a href="#" target="_blank">→ Details</a></div></li><li><span class="sli">🍎</span><div><strong>Wochenmarkt</strong><span>TODO Adresse / Details</span><br><a href="#" target="_blank">→ Details</a></div></li><li><span class="sli">🏪</span><div><strong>Baeckerei</strong><span>TODO Adresse / Details</span><br><a href="#" target="_blank">→ Details</a></div></li></ul>
-<div class="ib" style="margin-top:1.5rem"><strong>💶 Waehrung:</strong> Daenische Krone (DKK). Kartenzahlung nahezu ueberall moeglich, Bargeld selten noetig.</div>
+<p class="ss">Supermarkt, Bäckerei &amp; Shopping im Ort</p>
+<ul class="sl"><li><span class="sli">🛒</span><div><strong>SPAR Henne (Købmand Hansen)</strong><span>Mo–Do + So 8–18, Fr+Sa 8–19 · Grösster Supermarkt am Ort, wenige hundert Meter vom Haus. Backshop, Frischfleisch, Fisch, Getränke.</span><br><a href="https://spar.dk/butik/spar-henne" target="_blank">→ Details</a></div></li><li><span class="sli">🥖</span><div><strong>Købmand Hansens Bageri & Café</strong><span>Bäckerei morgens, Café tagsüber, Eis am Nachmittag – der Dreifach-Treff im Ort.</span><br><a href="https://www.kobmand-hansen.dk/" target="_blank">→ Details</a></div></li><li><span class="sli">👜</span><div><strong>COAST Henne Strand</strong><span>Outlet für Premium-Marken mitten im Ort – Regenjacken, Outdoor-Mode und skandinavisches Design.</span><br><a href="https://www.visitvesterhavet.dk/vesterhavet/vesterhavsferie/coast-henne-strand-gdk1090434" target="_blank">→ Details</a></div></li><li><span class="sli">🏪</span><div><strong>Grössere Märkte: Varde / Nørre Nebel</strong><span>Für den Wocheneinkauf lohnt ein Abstecher nach Nørre Nebel (~10 km, Rema 1000/Netto) oder Varde (~25 km, Bilka/Føtex).</span><br><a href="https://www.google.com/maps/search/Rema+1000+N%C3%B8rre+Nebel" target="_blank">→ Details</a></div></li></ul>
+<div class="ib" style="margin-top:1.5rem"><strong>💶 Währung:</strong> Dänische Krone (DKK). Kartenzahlung nahezu überall, Bargeld selten nötig. 1 EUR ≈ 7,45 DKK (fester Kurs).</div>
 </section>
 
 <!-- KARTE -->
 <section id="karte" class="sf"><div class="si">
 <h2 class="st">Übersichtskarte</h2>
-<p class="ss">Alle wichtigen Orte auf einen Blick – TODO Kartenbild</p>
-<div class="map-ph">🗺️ Karte folgt</div>
+<p class="ss">Alle wichtigen Orte auf einen Blick</p>
+<div class="map-ph">
+<span style="font-size:3rem">🗺️</span>
+<a href="https://www.google.com/maps/search/?api=1&query=Henne+Strand,+6854+Denmark" target="_blank" style="font-weight:500;font-size:1.1rem">Haus auf Google Maps öffnen →</a>
+</div>
 </div></section>
 
+<!-- Lightbox -->
+<div class="lb-overlay" id="lightbox">
+<span class="lb-close">&times;</span>
+<img id="lb-img" src="" alt="Vollbild">
+</div>
+
 <footer>
-<p>🇩🇰 Daenemark 2026 · TODO Unterkunft · Unterkunft · Datum folgt</p>
+<p>🇩🇰 Daenemark 2026 · Holzhaus am Duenenrand · Henne Strand · 22. – 29. August 2026</p>
 <p style="margin-top:.5rem;opacity:.6">Erstellt mit ❤ für den perfekten Urlaub</p>
 </footer>
 
 <script>
-function uc(){var t=new Date('2026-07-01T15:00:00+02:00'),n=new Date(),d=t-n;if(d<=0){document.getElementById('cd').innerHTML='<p style="font-size:1.5rem">🎉 Der Urlaub hat begonnen!</p>';return}var dd=Math.floor(d/864e5),hh=Math.floor(d%864e5/36e5),mm=Math.floor(d%36e5/6e4),ss=Math.floor(d%6e4/1e3);document.getElementById('cd-d').textContent=dd;document.getElementById('cd-h').textContent=('0'+hh).slice(-2);document.getElementById('cd-m').textContent=('0'+mm).slice(-2);document.getElementById('cd-s').textContent=('0'+ss).slice(-2)}uc();setInterval(uc,1e3);
+function uc(){var t=new Date('2026-08-22T15:00:00+02:00'),n=new Date(),d=t-n;if(d<=0){document.getElementById('cd').innerHTML='<p style="font-size:1.5rem">🎉 Der Urlaub hat begonnen!</p>';return}var dd=Math.floor(d/864e5),hh=Math.floor(d%864e5/36e5),mm=Math.floor(d%36e5/6e4),ss=Math.floor(d%6e4/1e3);document.getElementById('cd-d').textContent=dd;document.getElementById('cd-h').textContent=('0'+hh).slice(-2);document.getElementById('cd-m').textContent=('0'+mm).slice(-2);document.getElementById('cd-s').textContent=('0'+ss).slice(-2)}uc();setInterval(uc,1e3);
 document.querySelectorAll('nav a').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();var t=document.querySelector(this.getAttribute('href'));if(t)window.scrollTo({top:t.getBoundingClientRect().top+window.pageYOffset-50,behavior:'smooth'})})});
+var lb=document.getElementById('lightbox'),lbImg=document.getElementById('lb-img');
+document.querySelectorAll('.gal img').forEach(function(img){img.addEventListener('click',function(){lbImg.src=this.src;lb.classList.add('active')})});
+lb.addEventListener('click',function(){lb.classList.remove('active')});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('active')});
 </script>
 </body></html>
